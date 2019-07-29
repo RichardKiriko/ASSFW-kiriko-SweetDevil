@@ -100,7 +100,7 @@ function shape.slope_at_percent(ass_shape,t)
 	assert(type(t) == "number", "t is not a number")
 	return A3Shape.shape_slope_at_percent(ass_shape,t)
 end
-
+--添加了部分数据
 function shape.bounding(ass_shape) 
 	assert(type(ass_shape) == "string", "ass_shape is not a string")
 	local x = ffi.new("double[1]", 1)
@@ -253,7 +253,7 @@ function shape.reverse(ass_shape)
 	end
 return new_s
 end
-
+--图形对齐用，调整中心点（便于确定碎片的旋转中心）
 function shape.bounding_an(ass_shape,mode)
     assert(type(ass_shape) == "string", "ass_shape is not a string")
     assert(type(mode) == "number", "mode is not a number")
@@ -264,7 +264,7 @@ function shape.bounding_an(ass_shape,mode)
 	end
 return new_shape
 end
-
+--文字矢量化
 function shape.text_to_shape(text,style)
     assert(type(text) == "string","text is not a string")
 	assert(type(style) == "table","style is not a table")
@@ -350,6 +350,7 @@ function shape.vertical(wid,wid2,ass_shape)
 return last_shape
 end
 
+--此函数来自群文件
 --闪电生成函数用法：Lighting(x1,y1,x2,y2,displace,curDetail,thickness_min,thickness_max)    
 --▶x1,y1x2y2：图形起始与结束的坐标位置    
 --▶displace：最大位移值(数值越大,线条越曲折)    
@@ -462,6 +463,7 @@ end
 _G.shape = shape
 ]]--
 
+--碎片函数，返回碎片的图形集合
 function shape.suipian(shape,num)
 	left=_G.shape.bounding(shape).left
 	top=_G.shape.bounding(shape).top
@@ -493,6 +495,7 @@ function shape.suipian(shape,num)
 return shape_sp
 end
 
+--碎片函数，修改了碎片的形状生成方式（上一个是中心裂纹，这个是切割）
 function shape.fragment(ass_shape,num)
     sp={}
 	if num == 0 then
