@@ -272,12 +272,12 @@ function shape.text_to_shape(text,style)
 	shape_text=""
 	for shape in string.gmatch(texts,"m[^m]+") do
 	    local first_point=string.match(shape,"m ([%d%.-]+ [%d%.-]+)")
-		local last_point=string.match(shape,"([%d%.-]+ [%d%.-]+) c")
+	    local last_point=string.match(shape,"([%d%.-]+ [%d%.-]+) c")
 	    if last_point ~= nil then
-            shape=string.gsub(shape,"c","l "..last_point)   
-		end
-		shape_text=shape_text..shape
+            shape=string.gsub(shape,"c","l "..first_point)   
 	end
+	shape_text=shape_text..shape
+    end
 return shape_text
 end
 
