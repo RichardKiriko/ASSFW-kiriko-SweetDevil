@@ -15,10 +15,8 @@ Audio File: ../../../../Downloads/Video/00002_neenc-muxed.mp4
 Video File: ../../../../Downloads/Video/00002_neenc-muxed.mp4
 Video AR Mode: 4
 Video AR Value: 1.777778
-Video Zoom Percent: 0.625000
-Scroll Position: 176
-Active Line: 177
-Video Position: 3947
+Video Zoom Percent: 0.500000
+Video Position: 8504
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -71,10 +69,10 @@ Comment: 1,0:00:00.00,0:00:00.00,镜音中文 - 1,<<<>>>,0,0,0,template line fxg
 Comment: 0,0:00:00.00,0:00:00.00,镜音中文 - 1,黑色条纹,0,0,0,template line fxgroup one notext all,!restyle("shape")!{\p1\pos(0,0)\clip(!s_x!,!t_y!,!s_x!,!b_y!)\t(0,500,0.2,\clip(!bg.left!,!t_y!,!bg.right!,!b_y!))\t(!line.duration-500!,!line.duration!,1.6,\clip(!e_x!,!t_y!,!e_x!,!b_y!))}m !bg.left! !t_y+bg.wid1! l !bg.left! !t_y+bg.wid1+bg.wid2! l !bg.right! !t_y+bg.wid1+bg.wid2! l !bg.right! !t_y+bg.wid1! m !bg.left! !b_y-bg.wid1! l !bg.left! !b_y-bg.wid1-bg.wid2! l !bg.right! !b_y-bg.wid1-bg.wid2! l !bg.right! !b_y-bg.wid1!
 Comment: 0,0:00:00.00,0:00:00.00,镜音中文 - 1,文字,0,0,0,template line fxgroup one all,{\an5\c&H000000&\bord0\shad0\pos($lcenter,$lmiddle)\clip(!s_x!,!t_y!,!s_x!,!b_y!)\t(0,500,0.2,\clip(!bg.left!,!t_y!,!bg.right!,!b_y!))\t(!line.duration-500!,!line.duration!,1.6,\clip(!e_x!,!t_y!,!e_x!,!b_y!))}
 Comment: 0,0:00:00.00,0:00:00.00,Default,,0,0,0,,
-Comment: 0,0:00:00.00,0:00:00.00,镜音日文,文字入场和变色,0,0,0,template syl fxgroup rone noblank,!retime("line",-200+($si-1)/$syln*400,-400+($si-1)/$syln*300)!{\an5\pos($scenter,$smiddle)\3c&H000000&\c&H00ECF5&\t(300,600,\c&H000000&\3c&H00ECF5&)\fad(200,0)}
+Comment: 0,0:00:00.00,0:00:00.00,镜音日文,文字入场和变色,0,0,0,template syl fxgroup rone noblank,!retime("line",-200+($si-1)/$syln*400,-400+($si-1)/$syln*300)!{\an5\pos($scenter,$smiddle)\3c&H000000&\c&H00ECF5&\t(300,600,\c!string.len(syl.inline_fx)>=2 and syl.inline_fx or "&H000000&"!\3c&H00ECF5&)\fad(200,0)}
 Comment: 0,0:00:00.00,0:00:00.00,镜音日文,文字碎片,0,0,0,template syl fxgroup rone noblank notext,!restyle("shape")!!maxloop(#t_sp)!!retime("abs",$lend-400+($si-1)/$syln*300,$lend-400+($si-1)/$syln*300+math.random(400,700))!{\p1\move(!$sleft+t_sp[j].x!,!$stop+t_sp[j].y!,!$sleft+t_sp[j].x-math.random(50,100)!,!$stop+t_sp[j].y+math.random(-45,45)!,50,!line.duration!)\t(50,!line.duration!,\frx!math.random(-200,200)!)\fry!math.random(-200,200)!\frz!math.random(-200,200)!)\fad(0,200)}!t_sp[j].shape!
 Comment: 1,0:00:00.00,0:00:00.00,镜音日文,边框碎片,0,0,0,template syl fxgroup rone noblank notext,!restyle("shape")!!maxloop(#b_sp)!!retime("abs",$lend-400+($si-1)/$syln*300,$lend-400+($si-1)/$syln*300+math.random(400,700))!{\c&H00ECF5&\p1\move(!$sleft+b_sp[j].x!,!$stop+b_sp[j].y!,!$sleft+b_sp[j].x-math.random(50,100)!,!$stop+b_sp[j].y+math.random(-45,45)!,50,!line.duration!)\t(50,!line.duration!,\frx!math.random(-200,200)!)\fry!math.random(-200,200)!\frz!math.random(-200,200)!)\fad(0,200)}!b_sp[j].shape!
-Comment: 0,0:00:00.00,0:00:00.00,镜音中文,文字入场和变色,0,0,0,template syl fxgroup rone noblank,!retime("line",-200+($syln-$si)/$syln*400,-400+($syln-$si)/$syln*300)!{\an5\pos($scenter,$smiddle)\3c&H000000&\c&H00ECF5&\t(300,600,\c&H000000&\3c&H00ECF5&)\fad(200,0)}
+Comment: 0,0:00:00.00,0:00:00.00,镜音中文,文字入场和变色,0,0,0,template syl fxgroup rone noblank,!retime("line",-200+($syln-$si)/$syln*400,-400+($syln-$si)/$syln*300)!{\an5\pos($scenter,$smiddle)\3c&H000000&\c&H00ECF5&\t(300,600,\c!string.len(syl.inline_fx)>=2 and syl.inline_fx or "&H000000&"!\3c&H00ECF5&)\fad(200,0)}
 Comment: 0,0:00:00.00,0:00:00.00,镜音中文,文字碎片,0,0,0,template syl fxgroup rone noblank notext,!restyle("shape")!!maxloop(#t_sp)!!retime("abs",$lend-400+($syln-$si)/$syln*300,$lend-400+($syln-$si)/$syln*300+math.random(400,700))!{\p1\move(!$sleft+t_sp[j].x!,!$stop+t_sp[j].y!,!$sleft+t_sp[j].x+math.random(50,100)!,!$stop+t_sp[j].y+math.random(-45,45)!,50,!line.duration!)\t(50,!line.duration!,\frx!math.random(-200,200)!)\fry!math.random(-200,200)!\frz!math.random(-200,200)!)\fad(0,200)}!t_sp[j].shape!
 Comment: 1,0:00:00.00,0:00:00.00,镜音中文,边框碎片,0,0,0,template syl fxgroup rone noblank notext,!restyle("shape")!!maxloop(#b_sp)!!retime("abs",$lend-400+($syln-$si)/$syln*300,$lend-400+($syln-$si)/$syln*300+math.random(400,700))!{\c&H00ECF5&\p1\move(!$sleft+b_sp[j].x!,!$stop+b_sp[j].y!,!$sleft+b_sp[j].x+math.random(50,100)!,!$stop+b_sp[j].y+math.random(-45,45)!,50,!line.duration!)\t(50,!line.duration!,\frx!math.random(-200,200)!)\fry!math.random(-200,200)!\frz!math.random(-200,200)!)\fad(0,200)}!b_sp[j].shape!
 Comment: 0,0:00:00.00,0:00:00.00,Default,,0,0,0,,
@@ -142,8 +140,8 @@ Comment: 0,0:02:12.34,0:02:17.14,镜音中文,？,0,0,0,,
 Comment: 0,0:02:12.34,0:02:17.14,镜音日文,？,0,0,0,,
 Comment: 0,0:02:17.89,0:02:20.57,镜音中文,r1,0,0,0,karaoke,{\k1}y{\k1}e{\k1}a{\k1}h{\k1}　{\k1}挑{\k1}衅{\k1}　{\k1}我{\k1}们{\k1}可{\k1}毫{\k1}不{\k1}手{\k1}软
 Comment: 0,0:02:17.89,0:02:20.57,镜音日文,r1,0,0,0,karaoke,{\k1}y{\k1}e{\k1}a{\k1}h{\k1}　{\k1}挑{\k1}発{\k1}　{\k1}あ{\k1}た{\k1}し{\k1}達{\k1}は{\k1}　{\k1}n{\k1}o{\k1} {\k1}d{\k1}o{\k1}u{\k1}b{\k1}t
-Comment: 0,0:02:20.57,0:02:22.63,镜音中文,r1,0,0,0,karaoke,{\k1}可{\k1}别{\k1}光{\k1}顾{\k1}着{\k1}葱{\k1}绿{\k1}的{\k1}那{\k1}家{\k1}伙
-Comment: 0,0:02:20.57,0:02:22.63,镜音日文,r1,0,0,0,karaoke,{\k1}緑{\k1}の{\k1}ア{\k1}イ{\k1}ツ{\k1}に{\k1}ば{\k1}っ{\k1}か{\k1}構{\k1}っ{\k1}て{\k1}ん{\k1}ね
+Comment: 0,0:02:20.57,0:02:22.63,镜音中文,r1,0,0,0,karaoke,{\k1}可{\k1}别{\k1}光{\k1}顾{\k1}着{\k1\-&H80B800&}葱{\k1}绿{\k1}的{\k1}那{\k1}家{\k1}伙
+Comment: 0,0:02:20.57,0:02:22.63,镜音日文,r1,0,0,0,karaoke,{\k1\-&H80B800&}緑{\k1}の{\k1}ア{\k1}イ{\k1}ツ{\k1\-n}に{\k1}ば{\k1}っ{\k1}か{\k1}構{\k1}っ{\k1}て{\k1}ん{\k1}ね
 Comment: 0,0:02:23.83,0:02:26.58,镜音中文,r1,0,0,0,karaoke,{\k1}来{\k1}吧{\k1}　{\k1}战{\k1}火{\k1}燃{\k1}烧{\k1}　{\k1}直{\k1}到{\k1}何{\k1}时{\k1}才{\k1}能{\k1}获{\k1}得{\k1}合{\k1}格
 Comment: 0,0:02:23.83,0:02:26.58,镜音日文,r1,0,0,0,karaoke,{\k1}さ{\k1}ぁ{\k1}b{\k1}u{\k1}r{\k1}n{\k1}{\k1}u{\k1}p{\k1}　{\k1}い{\k1}つ{\k1}に{\k1}な{\k1}っ{\k1}た{\k1}ら{\k1}貰{\k1}え{\k1}る{\k1}合{\k1}格
 Comment: 0,0:02:26.58,0:02:28.94,镜音中文,r1,0,0,0,karaoke,{\k1}用{\k1}红{\k1}笔{\k1}圈{\k1}一{\k1}下{\k1}嘛{\k1}　{\k1}究{\k1}竟{\k1}是{\k1}哪{\k1}里{\k1}不{\k1}好{\k1}了{\k1}呢
@@ -168,7 +166,7 @@ Comment: 0,0:02:41.54,0:02:44.00,镜音中文 - 1,1,0,0,0,karaoke,「随便啦�
 Comment: 0,0:02:41.54,0:02:44.00,镜音日文 - 1,1,0,0,0,karaoke,「まあまあ」なんか要らない
 Comment: 0,0:02:44.00,0:02:46.63,镜音中文 - 1,1,0,0,0,karaoke,除死亡外我全都要呢
 Comment: 0,0:02:44.00,0:02:46.63,镜音日文 - 1,1,0,0,0,karaoke,欲しがります死ぬまでは
-Comment: 0,0:02:47.35,0:02:50.38,镜音中文 - 1,1,0,0,0,karaoke,挺拔了的身板 向养育我的街道送个吻
+Comment: 0,0:02:47.35,0:02:50.38,镜音中文 - 1,1,0,0,0,karaoke,挺拔了的身板　向养育我的街道送个吻
 Comment: 0,0:02:47.35,0:02:50.38,镜音日文 - 1,1,0,0,0,karaoke,伸びた背丈　育った街に投げキス
 Comment: 0,0:02:50.38,0:02:53.56,镜音中文 - 1,1,0,0,0,karaoke,好戏马上开场　快点做好觉悟吧
 Comment: 0,0:02:50.38,0:02:53.56,镜音日文 - 1,1,0,0,0,karaoke,見せ場はこっから　覚悟しとけよ
